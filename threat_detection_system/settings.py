@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-mock-key-for-development-purposes-only'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 INSTALLED_APPS = [
