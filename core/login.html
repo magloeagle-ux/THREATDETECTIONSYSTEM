@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IAA Security Platform - Login</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-card { background: #1e293b; padding: 40px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); width: 340px; border: 1px solid #334155; }
+        h2 { text-align: center; margin-top: 0; margin-bottom: 24px; color: #38bdf8; font-size: 24px; font-weight: 600; }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; margin-bottom: 6px; font-size: 14px; color: #94a3b8; }
+        input[type="text"], input[type="password"] { width: 100%; padding: 10px 12px; border: 1px solid #475569; background: #0f172a; color: white; border-radius: 6px; box-sizing: border-box; font-size: 15px; }
+        input:focus { outline: none; border-color: #38bdf8; }
+        button { width: 100%; padding: 12px; background: #0284c7; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 16px; margin-top: 10px; }
+        button:hover { background: #0369a1; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h2>System Sign-In</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="id_username">Username</label>
+                <input type="text" name="username" id="id_username" required autofocus autocomplete="username">
+            </div>
+            
+            <div class="form-group">
+                <label for="id_password">Password</label>
+                <input type="password" name="password" id="id_password" required autocomplete="current-password">
+            </div>
+
+            <button type="submit">Access Console</button>
+        </form>
+    </div>
+</body>
+</html>
